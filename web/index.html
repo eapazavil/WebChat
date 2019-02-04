@@ -6,26 +6,37 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>La Botika</title>
+        <title>LA BOTIKA</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/myStyles.css">
     </head>
     <body>
-        <h1>Nuestro chat</h1>
-        <div>
-            <div>
-                <label>Nombre: </label>
-                <input type="text" id="nombre" placeholder="usuario" />
+       
+        
+        <div id="contenedor">
+            <h1>Nuestro chat</h1>
+            <div id="contenido">
+                <div id="cabecera">
+                    <label>Nombre:</label>
+                    <input type="text" id="nombre" placeholder="usuario" />
+                    
+                </div>
+            
+                <textarea id="conversacion" readonly></textarea>
+            
+                <div id="mensajes">
+                    <label>Mensaje:</label>
+                    <textarea id="mensaje"></textarea>
+                </div>
+            
+                <div id="boton">
+                    <input type="submit" value="ingresar" id="btnEnviar">
+                </div>
+            
             </div>
-            <div>
-                <label>Mensaje:</label>
-                <textarea id="mensaje"></textarea>
-            </div>
-            <div>
-                <button id="btnEnviar">Enviar</button>
-            </div>
-            <div id="conversacion"></div>
         </div>
+        
         <script src="js/codigo.js"></script>
     </body>
 </html>

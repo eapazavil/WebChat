@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+
 (function(window, document, JSON){
     'use strict';
     var url = 'ws://'+window.location.host+'/Webchat/chat',
@@ -34,9 +35,8 @@
     }
     function onMessage(evt){
         var obj = JSON.parse(evt.data),
-            msg = obj.nombre+ ' dice: '+obj.mensaje ;
-        mensajes.innerHTML += '<br/>'+msg;
+            msg = obj.nombre+ ':\n  '+obj.mensaje ;
+        mensajes.innerHTML += '\n'+msg;
     }
 })(window, document, JSON)
-
 

@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/02/2019, 01:14:10 PM
+    Author     : USER
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+label{
+    margin-left: 0.9em;
+}
+#contenedor{
+    width: 1200px;
+    height: 1000px;
+    background: #d8d8d8;
+    margin:0.5em auto;
+    padding: 0.5em;
+}
+#contenido{
+   height: 50%; 
+   background: #FFFfff;
+}
+#cabecera{
+    height: 90%;
+    width: 25%;
+    background: #a4a4a4;
+    border-radius: 1em;
+    margin: 0.5em;
+    float: left;
+}
+#conversacion{
+    height: 80%;
+    width: 72%;
+    background: #a4a4a4;
+    border-radius: 1em;
+    margin: 0.5em;
+    float: right;
+}
+#mensajes{
+    height: 8%;
+    width: 59%;
+    background: #a4a4a4;
+    border-radius: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    float: left;
+}
+#mensaje{
+    height: 50%;
+    width: 85%;
+    background: #fff;
+    border-radius: 1em;
+    margin: 0.5em;
+    float: right;
+}
+#boton input[type="submit"]{
+    
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: #03a9f4;
+    cursor: pointer;
+    border-radius: 5px;
+}
+

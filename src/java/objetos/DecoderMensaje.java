@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package objetos;
+package Objetos;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -16,7 +16,7 @@ import javax.websocket.EndpointConfig;
 
 /**
  *
- * @author ACER
+ * @author fmach
  */
 public class DecoderMensaje implements Decoder.TextStream<Mensaje>{
 
@@ -29,7 +29,7 @@ public class DecoderMensaje implements Decoder.TextStream<Mensaje>{
             mensaje.setNombre(json.getString("nombre"));
             mensaje.setMensaje(json.getString("mensaje"));
         } 
-
+        
         return mensaje;
     }
 

@@ -5,38 +5,66 @@
  */
 
 
-(function(window, document, JSON){
+(function (window, document, JSON) {
     'use strict';
-    var url = 'ws://'+window.location.host+'/Webchat/chat',
-        ws  = new WebSocket(url),
-        mensajes = document.getElementById('conversacion'),
-        boton = document.getElementById('btnEnviar'),
-        
-        nombre = document.getElementById('nombre'),
-        mensaje = document.getElementById('mensaje');
-        
+    var url = 'ws://' + window.location.host + '/Webchat1/chat',
+            ws = new WebSocket(url),
+            usuarios = document.getElementById('usuario'),
+            mensajes = document.getElementById('conversacion'),
+            boton = document.getElementById('btnEnviar'),
+            log = document.getElementById('btnLog'),
+            voto = document.getElementById('btnVotar'),
+            mensaje = document.getElementById('mensaje'),
+            nombre = document.getElementById('nombre');
     ws.onopen = onOpen;
     ws.onclose = onClose;
     ws.onmessage = onMessage;
     boton.addEventListener('click', enviar);
-    function onOpen(){
+    log.addEventListener('click', enviarUsuario);
+    voto.addEventListener('click', votar);
+    
+    function onOpen() {
         console.log('conectado...');
     }
-    function onClose(){
+    function onClose() {
         console.log('Desconectado...');
     }
-    function enviar(){
+    function enviar() {
         var msg = {
             codigo: '1234',
-            nombre: nombre.value,
-            mensaje: mensaje.value 
+            nombre: '',
+            mensaje: mensaje.value
         };
         ws.send(JSON.stringify(msg))
     }
-    function onMessage(evt){
+    function enviarUsuario() {
+        var msg = {
+            codigo: '1233',
+            nombre: nombre.value,
+            mensaje: mensaje.value
+        };
+        ws.send(JSON.stringify(msg))
+    }
+    function votar(){
+        var msg = {
+            codigo: '1235',
+            nombre: nombre.value,
+            mensaje: mensaje.value
+        };
+        ws.send(JSON.stringify(msg))
+    }
+    function onMessage(evt) {
         var obj = JSON.parse(evt.data),
-            msg = obj.nombre+ ':\n  '+obj.mensaje ;
-        mensajes.innerHTML += '\n'+msg;
+                cod = obj.codigo,
+                msg = obj.mensaje,
+                nom = obj.nombre;
+        if (cod === '1233') {
+
+            usuarios.innerHTML =  msg;
+        } else {
+
+            mensajes.innerHTML += '\n' + msg;
+        }
     }
 })(window, document, JSON)
 

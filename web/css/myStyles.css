@@ -13,31 +13,62 @@ and open the template in the editor.
     padding: 0;
 }
 label{
+    margin-top: 0.5em;
     margin-left: 0.9em;
 }
+h1 { 
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+#boton input[type="text"]{
+    margin-top: 0.5em;
+    width: 40%;
+
+}
 #contenedor{
-    width: 1200px;
+    width: 80%;
     height: 1000px;
+
     background: #d8d8d8;
     margin:0.5em auto;
     padding: 0.5em;
+    border-radius: 1em;
 }
 #contenido{
-   height: 50%; 
-   background: #FFFfff;
+    height: 50%; 
+    background: transparent;
 }
 #cabecera{
     height: 90%;
-    width: 25%;
+    width: 22%;
+    font-size: 1em;
     background: #a4a4a4;
     border-radius: 1em;
-    margin: 0.5em;
+    margin: 0.5em ;
     float: left;
+}
+#usuario{
+    margin: 0.5em;
+    font-family: "Courier New";
 }
 #conversacion{
     height: 80%;
-    width: 72%;
+    width: 70%;
     background: #a4a4a4;
+    border-radius: 1em;
+    margin: 0.5em;
+    float: right;
+}
+
+#mensaje{
+    height: 50%;
+    width: 85%;
+    background: #fff;
     border-radius: 1em;
     margin: 0.5em;
     float: right;
@@ -50,26 +81,29 @@ label{
     margin-left: 0.5em;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
-    float: left;
-}
-#mensaje{
-    height: 50%;
-    width: 85%;
-    background: #fff;
-    border-radius: 1em;
-    margin: 0.5em;
     float: right;
 }
+#usuario{
+    margin-left: 0.9em;
+}
+#boton{
+    margin-right: 0.5em;
+
+    margin-top: 0.5em;
+}
 #boton input[type="submit"]{
-    
+
     background: transparent;
     border: none;
     outline: none;
-    padding: 10px 20px;
+    padding: 10px 16px;
     font-size: 16px;
     color: #fff;
     background: #03a9f4;
     cursor: pointer;
     border-radius: 5px;
+    margin-bottom: 0.5em;
+    margin-left: 0.2em;
+    float: right;
 }
 

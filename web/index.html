@@ -12,31 +12,38 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/myStyles.css">
     </head>
     <body>
-       
-        
+
+
         <div id="contenedor">
-            <h1>Nuestro chat</h1>
+            <h1>LA BOTIKA 2.0</h1>
             <div id="contenido">
                 <div id="cabecera">
+                    <div id="boton">
                     <label>Nombre:</label>
-                    <input type="text" id="nombre" placeholder="usuario" />
+                    <input type="text" id="nombre" placeholder="usuario" size="10"  />
                     
+                        <input type="submit" value="Ingresar" id="btnLog">
+                    </div>
+                    <div id="usuario">  
+
+                    </div>
                 </div>
-            
+
+
                 <textarea id="conversacion" readonly></textarea>
-            
+
                 <div id="mensajes">
                     <label>Mensaje:</label>
                     <textarea id="mensaje"></textarea>
                 </div>
-            
+
                 <div id="boton">
-                    <input type="submit" value="ingresar" id="btnEnviar">
+                    <input type="submit" value="votar" id="btnVotar">
+                    <input type="submit" value="enviar" id="btnEnviar">
                 </div>
-            
             </div>
         </div>
-        
+
         <script src="js/codigo.js"></script>
     </body>
 </html>
